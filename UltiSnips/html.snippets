@@ -1,0 +1,45 @@
+priority -50
+
+snippet <script
+<script type="text/javascript" src="${1}"></script>${2}
+endsnippet
+
+snippet <link
+<link rel="stylesheet" type="text/css" media="${1:screen}" href="${2}">${3}
+endsnippet
+
+snippet <form
+<form method="${1:post}${2:get}" action="${3}"${4: enctype="multipart/form-data"}>
+	${5}
+</form>
+endsnippet
+
+snippet <input
+<input type="${1:text}" name="${2}"${3}>${4}
+endsnippet
+
+snippet <select
+<select name="${1}">
+	<option value="${2:option}">${3:$2}</option>${4}
+</select>
+endsnippet
+
+snippet <option
+<option value="${1:option}">${2:$1}</option>${3}
+endsnippet
+
+snippet <textarea
+<textarea name="${1}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
+endsnippet
+
+snippet <img
+<img src="${2}">${3}
+endsnippet
+
+snippet <a
+<a title="${1}" href="${2}">${3}</a>${4}
+endsnippet
+
+snippet <meta
+<meta name="${1}" content="${2}">${3}
+endsnippet
