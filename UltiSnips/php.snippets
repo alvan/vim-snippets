@@ -17,7 +17,7 @@ echo '${1}<br />';
 endsnippet
 
 snippet ?echo
-<? echo ${1} ?>
+<?php echo ${1} ?>
 endsnippet
 
 snippet ?e
@@ -29,7 +29,7 @@ include '${1}';
 endsnippet
 
 snippet ?inc
-<? include ${1} ?>
+<?php include ${1} ?>
 endsnippet
 
 snippet inc_
@@ -153,9 +153,9 @@ if (${1:/* condition */})
 endsnippet
 
 snippet ?if
-<? if (${1}): ?>
+<?php if (${1}): ?>
 	${2}
-<? endif; ?>
+<?php endif; ?>
 endsnippet
 
 snippet else
@@ -173,12 +173,12 @@ else if (${1:/* condition */})
 endsnippet
 
 snippet ?else
-<? else: ?>
+<?php else: ?>
 	${1}
 endsnippet
 
 snippet ?elif
-<? elseif (${1}): ?>
+<?php elseif (${1}): ?>
 	${2}
 endsnippet
 
@@ -209,9 +209,9 @@ for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
 endsnippet
 
 snippet ?for
-<? for ($${2:i} = 0; $$2 < ${1}; $$2${3:++}): ?>
+<?php for ($${2:i} = 0; $$2 < ${1}; $$2${3:++}): ?>
 	${4}
-<? endfor; ?>
+<?php endfor; ?>
 endsnippet
 
 snippet foe "foreach loop" b
@@ -222,9 +222,9 @@ foreach ($${1} as $${2:val})
 endsnippet
 
 snippet ?foe
-<? foreach ($${1} as $${2:val}): ?>
+<?php foreach ($${1} as $${2:val}): ?>
 	${3}
-<? endforeach; ?>
+<?php endforeach; ?>
 endsnippet
 
 snippet try
