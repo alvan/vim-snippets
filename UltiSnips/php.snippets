@@ -2,22 +2,21 @@ priority -50
 
 extends html
 
-snippet php
-<?php
-${1}
-endsnippet
-
 snippet er "error report" b
 error_reporting(${1:E_ALL});
 ini_set('display_errors', '${2:on}');
 endsnippet
 
-snippet echo
-echo '${1}<br />';
+snippet ?php
+<?php ${1} ?>
 endsnippet
 
 snippet ?echo
 <?php echo ${1} ?>
+endsnippet
+
+snippet ?=
+<?= ${1} ?>
 endsnippet
 
 snippet ?e
