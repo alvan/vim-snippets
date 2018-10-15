@@ -1,7 +1,7 @@
 snippet guard script reload guard
 	if exists('${1:did_`vim_snippets#Filename()`}') || &cp${2: || version < 700}
 		finish
-	endif
+	en
 	let $1 = 1${0}
 snippet fun function
 	fun! ${1:`expand('%') =~ 'autoload' ? substitute(matchstr(expand('%:p'),'autoload/\zs.*\ze.vim'),'[/\\]','#','g').'#' : ''`}${2:function_name}(${3})
@@ -29,13 +29,16 @@ snippet wh while loop
 snippet if if statement
 	if ${1}
 		${0}
-	endif
-snippet else else statement
-	else
+	en
+snippet el else statement
+	el
+		${1}
+snippet ei else statement
+	elseif
 		${1}
 snippet ife if ... else statement
 	if ${1}
 		${2}
-	else
+	el
 		${0}
-	endif
+	en

@@ -1,0 +1,59 @@
+extends html, javascript, css
+
+snippet vue
+<template>
+    <div class="${1:`!p snip.rv = (snip.basename or "")`}">
+
+    </div>
+</template>
+
+<script>
+    define([
+        // 'css!style/$1.css'
+    ], function(
+
+    ) {
+        return {
+            name: '$1',
+            props: [${2}],
+            components: {},
+            data: function() {
+                return {${3}}
+            },
+            template: template,
+        }
+    });
+</script>
+endsnippet
+
+snippet :if
+:if="${1}"
+endsnippet
+
+snippet vif
+<${1:div} :if="${2}">
+    ${3}
+</$1>
+endsnippet
+
+snippet :for
+:for="${1:item} in ${2:items}"
+endsnippet
+
+snippet vfor
+<${1:div} :for="${2:item} in ${3:items}" ${4:key="item.id"}>
+    ${5}
+</$1>
+endsnippet
+
+snippet :key
+:key="${1:item.id}"
+endsnippet
+
+snippet @cl
+@click="${1}"
+endsnippet
+
+snippet @click
+@click="${1}"
+endsnippet
