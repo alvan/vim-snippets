@@ -26,28 +26,40 @@ snippet vue
 </script>
 endsnippet
 
-snippet :if
-:if="${1}"
+snippet {{
+{{ ${1} }}
 endsnippet
 
 snippet vif
-<${1:div} :if="${2}">
+<${1:template} v-if="${2}">
     ${3}
 </$1>
 endsnippet
 
-snippet :for
-:for="${1:item} in ${2:items}"
+snippet v-if
+v-if="${1}"
 endsnippet
 
-snippet vfor
-<${1:div} :for="${2:item} in ${3:items}" ${4:key="item.id"}>
-    ${5}
+snippet velif
+<${1:template} v-else-if="${2}">
+    ${3}
 </$1>
 endsnippet
 
-snippet :key
-:key="${1:item.id}"
+snippet velse
+<${1:template} v-else>
+    ${2}
+</$1>
+endsnippet
+
+snippet vfor
+<${1:template} v-for="${2:item} in ${3:$2s}"${4: :key="$2.${5:id}"}>
+    ${6}
+</$1>
+endsnippet
+
+snippet v-for
+v-for="${1:item} in ${2:$1s}"
 endsnippet
 
 snippet @cl
